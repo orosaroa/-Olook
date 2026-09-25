@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>ألـق | O Look — منيو رقمي (Copy)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF4E8; --ink:#54554D; --ink-strong:#3A3B34; --muted:#8C877A;
+  --pill:#54554D; --pill-text:#FAF4E8; --accent:#54554D; --line:#E4DCCC;
+  --card:#FFFDF8;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#14323A; --ink:#EFE7D8; --ink-strong:#FAF4E8; --muted:#9FB8AF;
+    --pill:#205048; --pill-text:#F3ECDD; --accent:#E4C89A; --line:#2A4B45;
+    --card:#193B41;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#14323A; --ink:#EFE7D8; --ink-strong:#FAF4E8; --muted:#9FB8AF;
+  --pill:#205048; --pill-text:#F3ECDD; --accent:#E4C89A; --line:#2A4B45;
+  --card:#193B41;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);height:100%;}
+body{
+  font-family:'Amiri', serif;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+.en{font-family:'Cormorant Garamond', serif;}
+.wrap{max-width:480px;margin:0 auto;padding:0 18px 40px;}
+header{text-align:center;padding:28px 18px 10px;}
+.logo{width:92px;height:92px;border-radius:50%;object-fit:cover;box-shadow:0 4px 18px rgba(0,0,0,.18);}
+h1{font-size:26px;margin:14px 0 2px;color:var(--ink-strong);letter-spacing:.5px;}
+h1 .en{font-size:17px;display:block;font-style:italic;color:var(--muted);margin-top:2px;}
+.tag{font-size:13px;color:var(--muted);margin:2px 0 10px;}
+.loc a{color:var(--muted);font-size:12.5px;text-decoration:none;border-bottom:1px dotted var(--muted);}
+.social{display:flex;gap:14px;justify-content:center;margin:12px 0 4px;font-size:12.5px;}
+.social a{color:var(--ink);text-decoration:none;padding:5px 12px;border:1px solid var(--line);border-radius:20px;}
+.searchbar{position:sticky;top:0;z-index:5;background:var(--bg);padding:12px 0 8px;}
+.searchbar input{
+  width:100%;padding:11px 16px;border-radius:24px;border:1px solid var(--line);
+  background:var(--card);color:var(--ink-strong);font-family:'Cormorant Garamond',serif;font-size:16px;outline:none;
+}
+nav{position:sticky;top:56px;z-index:5;background:var(--bg);display:flex;gap:8px;overflow-x:auto;padding:6px 0 12px;scrollbar-width:none;}
+nav::-webkit-scrollbar{display:none}
+nav button{
+  flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--ink);
+  padding:7px 14px;border-radius:18px;font-family:'Cormorant Garamond',serif;font-size:14px;cursor:pointer;white-space:nowrap;
+}
+nav button.active{background:var(--pill);color:var(--pill-text);border-color:var(--pill);}
+section.cat{margin-top:22px;}
+.catbar{
+  background:var(--pill);color:var(--pill-text);border-radius:22px;padding:10px 18px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.catbar .en{font-size:15px;letter-spacing:.5px;}
+.catbar .ar{font-size:17px;font-weight:700;}
+.item{display:flex;justify-content:space-between;align-items:flex-start;padding:14px 4px;border-bottom:1px solid var(--line);gap:10px;}
+.item:last-child{border-bottom:none;}
+.names{text-align:right;flex:1;}
+.names .ar{font-size:16.5px;font-weight:700;color:var(--ink-strong);line-height:1.5;}
+.names .en{font-size:13.5px;color:var(--muted);font-style:italic;}
+.price{text-align:left;min-width:74px;}
+.price .amt{font-size:16px;font-weight:700;color:var(--accent);}
+.price .cal{display:block;font-size:11.5px;color:var(--muted);font-family:'Cormorant Garamond',serif;margin-top:2px;}
+.price .sizeline{font-size:11px;color:var(--muted);display:block;}
+.empty{text-align:center;color:var(--muted);padding:40px 0;font-size:14px;display:none;}
+footer{text-align:center;margin-top:36px;font-size:12px;color:var(--muted);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img class="logo" src="data:image/jpeg;base64,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" alt="O Look logo">
+    <h1>ألـق<span class="en">O Look</span></h1>
+    <div class="tag">Coffee vibes ✨ Come and look for more</div>
+    <div class="loc"><a href="https://www.google.com/maps/search/?api=1&query=O+Look+Coffee+As+Salam+Road+Al+Jamiah+Madinah" target="_blank">As Salam Rd, Al Jamiah, Madinah</a></div>
+    <div class="social">
+      <a href="https://www.instagram.com/olookcoffee" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@olookcoffee" target="_blank">TikTok</a>
+      <a href="https://www.snapchat.com/add/olookcoffee" target="_blank">Snapchat</a>
+    </div>
+  </header>
+
+  <div class="searchbar"><input id="q" type="text" placeholder="ابحث عن مشروب أو صنف..."></div>
+  <nav id="nav"></nav>
+  <main id="menu"></main>
+  <div class="empty" id="empty">ما فيه نتائج مطابقة</div>
+
+  <footer>ألـق | O Look — Madinah, Saudi Arabia</footer>
+</div>
+
+<script>
+
+const MENU = [
+{cat:"espresso", ar:"مشروبات الإسبريسو", en:"Espresso Drinks", items:[
+["إسبريسو","Espresso","12","2"],
+["أمريكانو","Americano","14","2"],
+["إسبريسو مكياتو","Espresso Macchiato","13","10"],
+["كورتادو","Cortado","14","51"],
+["فلات وايت","Flat White","15","65"],
+["كابتشينو","Cappuccino","16","110"],
+["لاتيه","Latte","16","130"],
+["سبانش لاتيه","Spanish Latte","18","215"],
+]},
+{cat:"filter", ar:"مشروبات التقطير", en:"Filter Drinks", items:[
+["قهوة اليوم (حار)","Coffee of the Day (Hot)","S 10 | M 12 | L 15","2"],
+["قهوة اليوم (بارد)","Coffee of the Day (Cold)","M 12 | L 16","2"],
+["آيس دريب","Ice Drip","20","3"],
+["في60 حار","V60 Hot","18","3"],
+["بوكس قهوة اليوم حار","Box Coffee of the Day (Hot)","42","8"],
+["بوكس قهوة اليوم بارد","Box Coffee of the Day (Cold)","53","8"],
+]},
+{cat:"cold", ar:"المشروبات الباردة", en:"Cold Drinks", items:[
+["إسبريسو فريدو","Espresso Freddo","15","5"],
+["آيس أمريكانو","Iced Americano","16","3"],
+["فريدو كابتشينو","Freddo Cappuccino","22","220"],
+["آيس لاتيه","Iced Latte","18","205"],
+["آيس سبانش لاتيه","Iced Spanish Latte","20","250"],
+["كركديه","Iced Karkade","20","180"],
+["عصير برتقال","Orange Juice","15","150"],
+["آيس تي توت","Ice Tea Berries","18","150"],
+["آيس تي خوخ","Ice Tea Peach","18","150"],
+]},
+{cat:"matcha", ar:"ماتشا", en:"Matcha", items:[
+["آيس ماتشا لاتيه","Iced Matcha Latte","20","180"],
+["آيس كلاود ماتشا (مستيكا)","Iced Cloud Matcha (Mistika)","22","150"],
+["سكاي بلو ماتشا","Sky Blue Matcha","24","300"],
+]},
+{cat:"other", ar:"مشروبات أخرى", en:"Other Drinks", items:[
+["شاي","Tea","7","3"],
+["ماء","Water","1","0"],
+["مياه غازية","Sparkling Water","5","0"],
+]},
+{cat:"flatbread", ar:"فلات بريد", en:"Flat Bread", items:[
+["فلات بريد حلومي","Flat Bread Halloumi","20",""],
+["فلات بريد مارغريتا","Flat Bread Margherita","18",""],
+["فلات بريد تيركي","Flat Bread Turkey","18",""],
+["فلات بريد شكشوكة","Flat Bread Shakshoka","17",""],
+["فلات بريد لبنة بالعسل","Flat Bread Labneh & Honey","15",""],
+["فلات بريد أجبان","Flat Bread Cheese","16",""],
+]},
+{cat:"desserts", ar:"الحلويات", en:"Desserts", items:[
+["كيكة فستق بالتيراميسو","Pistachio Tiramisu Cake","22","450"],
+["براونيز","Brownies","15","280"],
+["كيكة البيكان","Pecan Cake","20","420"],
+["تشيز كيك كراميل","Caramel Cheesecake","23","550"],
+["كوكيز","Cookies","13","230"],
+]},
+{cat:"extras", ar:"إضافات", en:"Extras", items:[
+["إضافة شوت إسبريسو","Add Espresso Shot","4",""],
+["حليب قليل الدسم","Low-fat Milk","2",""],
+["حليب جوز هند","Coconut Milk","4",""],
+["حليب فانيليا","Vanilla Milk","4",""],
+["حليب شوفان","Oat Milk","4",""],
+]},
+];
+
+const menuEl = document.getElementById('menu');
+const navEl = document.getElementById('nav');
+const q = document.getElementById('q');
+const emptyEl = document.getElementById('empty');
+
+function priceHTML(p){
+  if(p.includes('|')){
+    return p.split('|').map(s=>'<span class="sizeline">'+s.trim()+'</span>').join('');
+  }
+  return '<span class="amt">'+p+' ر.س</span>';
+}
+
+function render(filter){
+  menuEl.innerHTML = '';
+  let anyVisible = false;
+  MENU.forEach(cat=>{
+    const items = filter ? cat.items.filter(it => it[0].includes(filter) || it[1].toLowerCase().includes(filter.toLowerCase())) : cat.items;
+    if(items.length===0) return;
+    anyVisible = true;
+    const sec = document.createElement('section');
+    sec.className='cat'; sec.id='cat-'+cat.cat;
+    let rows = items.map(it=>{
+      const calHTML = it[3] ? '<span class="cal">'+it[3]+' cal</span>' : '';
+      return '<div class="item"><div class="names"><div class="ar">'+it[0]+'</div><div class="en">'+it[1]+'</div></div><div class="price">'+priceHTML(it[2])+calHTML+'</div></div>';
+    }).join('');
+    sec.innerHTML = '<div class="catbar"><span class="en">'+cat.en+'</span><span class="ar">'+cat.ar+'</span></div>'+rows;
+    menuEl.appendChild(sec);
+  });
+  emptyEl.style.display = anyVisible ? 'none' : 'block';
+}
+
+function buildNav(){
+  navEl.innerHTML = MENU.map(c=>'<button data-cat="'+c.cat+'">'+c.ar+'</button>').join('');
+  navEl.querySelectorAll('button').forEach(b=>{
+    b.addEventListener('click',()=>{
+      const el = document.getElementById('cat-'+b.dataset.cat);
+      if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+}
+
+q.addEventListener('input', e => render(e.target.value.trim()));
+
+buildNav();
+render('');
+</script>
+</body>
+</html>
